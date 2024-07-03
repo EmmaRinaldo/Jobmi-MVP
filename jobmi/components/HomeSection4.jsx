@@ -40,7 +40,7 @@ export const HomeSection4 = () => {
 
       <div className="font-sans flex flex-col lg:flex-row items-center justify-around my-10 sm:mx-20 p-5">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white p-6 m-4 rounded-lg shadow-lg max-w-xs w-[25%]">
+          <div key={index} className="bg-white p-6 m-4 rounded-lg max-w-xs w-[25%] border border-gray-300">
             <p className="absolute text-purple-600 text-[90px] mt-0">“</p>
             <div className="justify-end">
               <img src={testimonial.image} alt={testimonial.name} className="mx-auto w-24 object-cover" />
