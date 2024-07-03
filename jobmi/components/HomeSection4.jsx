@@ -40,16 +40,17 @@ export const HomeSection4 = () => {
 
       <div className="font-sans flex flex-col lg:flex-row items-center justify-around my-10 sm:mx-20 p-5">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="bg-white p-6 m-4 rounded-lg max-w-xs w-[25%] border border-gray-300">
+          <div key={index} className="bg-[#FCFCFC] px-6 m-3 rounded-lg max-w-xs sm:w-[40%] lg:w-[25%] ">
             <p className="absolute text-purple-600 text-[90px] mt-0">“</p>
             <div className="justify-end">
               <img src={testimonial.image} alt={testimonial.name} className="mx-auto w-24 object-cover" />
             </div>
             
             <p className="text-[#B07DFF] text-base mb-4 ">{testimonial.text}</p>
-            <p className="absolute text-purple-600 text-[90px] ml-[280px] text-right">”</p>
+            
             <div className="text-right mt-4">
               <p className="text-[#B07DFF] font-september text-6xl">{testimonial.name}, {testimonial.age} ans</p>
+              <p className="text-purple-600 text-[90px] text-right leading-none">”</p>
             </div>
             
           </div>
