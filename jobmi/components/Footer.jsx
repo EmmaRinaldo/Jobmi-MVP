@@ -41,6 +41,7 @@ export const Footer = () => {
             href="https://www.instagram.com/jobmifr?igsh=MXQyczl6cHlka2s2bw=="
             target="_blank"
             rel="noopener noreferrer"
+            title='Instagram'
           >
             <li className="text-white">
               <FaInstagram className="text-2xl" />
@@ -50,6 +51,7 @@ export const Footer = () => {
             href="https://www.tiktok.com/@jobmifr?_t=8n1bHZwV2fY&_r=1"
             target="_blank"
             rel="noopener noreferrer"
+            title='TikTok'
           >
             <li className="text-white">
               <FaTiktok className="text-2xl" />
@@ -59,6 +61,7 @@ export const Footer = () => {
             href="https://www.linkedin.com/company/jobmipro/"
             target="_blank"
             rel="noopener noreferrer"
+            title='LinkedIn'
           >
             <li className="text-white">
               <FaLinkedinIn className="text-2xl" />
@@ -83,7 +86,9 @@ export const Footer = () => {
           des mises à jour et d'autres messages marketing. Vous comprenez que
           Jobmi peut utiliser vos informations conformément à sa&nbsp;
           <span className="font-bold underline underline-white">
-            politique de confidentialité
+            <Link href="/politique-de-confidentialite">
+              politique de confidentialité
+            </Link>
           </span>
           .
         </p>
