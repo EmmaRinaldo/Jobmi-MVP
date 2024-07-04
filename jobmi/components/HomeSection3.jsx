@@ -20,7 +20,7 @@ export const HomeSection3 = () => {
 
   return (
     <div className='mx-2'>
-      <div className="home-section-3 bg-[#14213d] text-white mt-16 rounded-xl py-10 px-4 sm:px-8 h-[400px] flex justify-center items-center">
+      <div className="home-section-3 bg-[#14213d] text-white mt-16 rounded-xl py-10 px-4 sm:px-8 sm:h-[400px] flex justify-center items-center">
       <div className="container max-w-screen-xl mx-auto">
         <h2 className="text-center text-4xl font-bold mb-8">
           Les <span className='underline-tilted decoration-[#a29bfe]'>chiffres</span> parlent d'eux-mêmes !

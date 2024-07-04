@@ -63,7 +63,7 @@ export const HomeSection5 = () => {
             <img
               src={isHovered ? "media/group_people.png" : "media/womanonphone.png"}
               alt="Person on phone"
-              className="w-full h-auto rounded-lg absolute z-0"
+              className="w-[1100px] h-[500px] rounded-lg absolute z-0"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             />
@@ -76,7 +76,7 @@ export const HomeSection5 = () => {
             <Link
             target="_blank"
             rel="noopener noreferrer"
-            href="https://626063d8.sibforms.com/serve/MUIFAEtkyLp2CKWZ3dK7tZAaV913c-SP0e_IP8fVFhikgJbXeSQSKrIBS_d-L0WUIziK7BVpRA-4qmg1RW6kU-7j7rKYnwCGuIOrgcqaEtKr7d060ZPGT22jUjuO2vZhW1-fOtMV78j2rBU-04_F8pj7pPLi_oHLjV-8Gns1ljpjWJRXuuVT2LVH3B1OBRwulcezAhR5VOqWQDnn?utm_source=Waitinglist&utm_medium=email&utm_campaign=Launch_campaign&utm_id=LP&utm_content=CTA4"
+            href="https://www.jobmi.fr/blog/comment-commencer-ta-reconversion-professionnelle"
             className="rounded-xl px-4 py-2 mt-[40px] ml-9 flex items-center gap-2 bg-black text-white font-semibold w-fit h-fit"
           >
             Voir l’article

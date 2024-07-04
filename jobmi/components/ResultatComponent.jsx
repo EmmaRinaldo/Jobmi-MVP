@@ -92,7 +92,7 @@ export const ResultatComponent = ({ results, image }) => {
                             </div>
                             
                             <Link href={offer.link} target="_blank" rel="noopener noreferrer">
-                                <button className="px-4 py-2 bg-violet text-white rounded-lg hover:bg-purple-800">Postuler</button>
+                                <button className="px-4 py-2 bg-violet text-white rounded-lg hover:bg-purple-800">Découvrir</button>
                             </Link>
                         </div>
                     ))}
