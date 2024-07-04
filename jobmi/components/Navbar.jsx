@@ -12,7 +12,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="navbar-part flex items-center justify-between fixed top-0 left-0 right-0 transition-all duration-300 py-2 bg-slate-50 z-50">
+    <div className="navbar-part flex items-center justify-between fixed top-0 left-0 right-0 transition-all duration-300 py-2 bg-slate-50 z-50 w-screen">
       <div className="w-full max-w-screen-xl mx-auto px-6 lg:px-12 font-sans flex items-center justify-between">
         <Link href="/" className="navbar-item flex items-center justify-center">
           <img
@@ -35,7 +35,7 @@ export const Navbar = () => {
             />
           </button>
         </div>
-        <div className={`menu-links flex-col lg:flex lg:flex-row items-center gap-10 ${isMenuOpen ? 'flex' : 'hidden'} lg:flex absolute lg:relative top-16 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-slate-50 lg:bg-transparent p-6 lg:p-0`}>
+        <div className={`menu-links flex-col lg:flex lg:flex-row items-center gap-5 ${isMenuOpen ? 'flex' : 'hidden'} lg:flex absolute lg:relative top-16 lg:top-auto left-0 lg:left-auto w-full lg:w-auto bg-slate-50 lg:bg-transparent p-6 lg:p-0`}>
           <Link href="/stage-et-formation" className="menu-item">
             Stage et formation
           </Link>

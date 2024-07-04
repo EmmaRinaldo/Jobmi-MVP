@@ -29,7 +29,7 @@ export const Footer = () => {
         <Link href="https://drive.google.com/drive/folders/1re4tpEimaPreuEc4-qHPCnmllJSosFBo?usp=share_link" target="_blank" rel="noopener noreferrer" className="text-white font-inter underline sm:mt-15">
           PRESSE
         </Link>
-        <p>
+        <p className="text-white font-inter sm:mt-15">
           @DCParis
         </p>
       </div>

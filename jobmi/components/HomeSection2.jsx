@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const AccordionItem = ({ title, children, isOpen, onClick }) => (
   <div className="accordion-item flex flex-col">
     <div 
-      className={`accordion-header flex justify-between items-center px-4 py-4 cursor-pointer ${isOpen ? 'bg-purple-600 text-white' : 'bg-white text-black'}`} 
+      className={`accordion-header flex justify-between items-center sm:px-4 py-4 cursor-pointer ${isOpen ? 'bg-purple-600 text-white' : 'bg-white text-black'}`} 
       onClick={onClick}
     >
       <span>{title}</span>
@@ -25,27 +25,26 @@ export const HomeSection2 = () => {
   };
 
   return (
-    <div className="section2-part py-10 px-4 sm:px-8 bg-white relative">
-      <div className="grid grid-cols-12 gap-8 items-center">
-        <div className="col-span-12 sm:col-span-6 relative h-96">
-          <div className="absolute w-56 h-56 sm:w-72 sm:h-72 transform rotate-[-10deg] mt-[-75px] left-[200px]">
-            <img
-              src="/media/girlswithlap.png"
+
+    <div className='py-10 font-sans w-screen flex justify-center'>
+
+      <div className='flex sm:flex-row flex-col w-full sm:max-w-screen-lg'>
+
+        <div className='w-full sm:w-1/2 flex justify-center items-center'>
+          <img
+              src="/media/img-accueil-section-2.svg"
               alt="Dummy 1"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="absolute h-[250px] w-[250px] top-28 ml-[200px] sm:top-20 sm:left-28">
-            <img
-              src="/media/girlsitting.png"
-              alt="Dummy 2"
-              className="w-full h-full object-cover rounded-lg"
-            />
-            <img src='media/Group333.png' alt='arrow' className='ml-[150px] h-[100px] w-[100px]' />
-          </div>
+              className="h-auto w-full max-w-[450px] object-cover rounded-lg"
+          />
         </div>
-        <div className="col-span-12 sm:col-span-6">
-          <div className="accordion bg-[#F8F8F8] rounded-xl px-4 py-4 text-black font-semibold flex flex-col gap-4">
+
+  
+
+
+
+      <div className='w-full sm:w-1/2 flex justify-center items-center'>
+
+        <div className="accordion bg-[#F8F8F8] rounded-xl w-full max-w-[450px] px-4 py-4 text-black font-semibold flex flex-col gap-4">
             <AccordionItem 
               title="1 Test de découverte de métier" 
               isOpen={openIndex === 0} 
@@ -69,8 +68,13 @@ export const HomeSection2 = () => {
             </AccordionItem>  
           </div>
         </div>
+
+
       </div>
+      
+      
     </div>
+
   );
 };
 

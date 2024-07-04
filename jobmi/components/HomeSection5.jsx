@@ -26,7 +26,7 @@ export const HomeSection5 = () => {
               Enterprise, recrutez !
             </h2>
           </div>
-          <p className="text-md sm:text-md text-black mb-4 mt-4 w-[450px]">
+          <p className="text-md sm:text-md text-black mb-4 mt-4 sm:w-[450px]">
             Vous cherchez à accueillir des stagiaires motivés ? Contactez-nous
             pour proposer vos stages et découvrir de véritables talents
             passionnés.

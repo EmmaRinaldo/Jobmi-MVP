@@ -6,7 +6,6 @@ import { registerUser, subscribeToNewsletter } from '../../services/userService'
 import { signIn } from "next-auth/react";
 
 export default function Inscription() {
-
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -14,7 +13,8 @@ export default function Inscription() {
     city: '',
     password: '',
     confirmPassword: '',
-    phone: ''
+    phone: '',
+    googleId: '' // ajout de googleId pour le cas où il est utilisé
   });
 
   const [subscribe, setSubscribe] = useState(false);
@@ -47,6 +47,7 @@ export default function Inscription() {
 
     try {
       const { confirmPassword, ...dataToSend } = formData; // Exclure confirmPassword des données envoyées
+
       const data = await registerUser(dataToSend);
       console.log('Utilisateur enregistré:', data);
       
@@ -59,6 +60,7 @@ export default function Inscription() {
       console.error('Erreur pour l\'enregistrement de l\'utilisateur', error);
     }
   };
+
 
   const loginWithGoogle = () => {
     signIn("google", { callbackUrl: "/" });
@@ -106,7 +108,7 @@ export default function Inscription() {
               <input type="password" placeholder="Confirmer le mot de passe" name="confirmPassword" className="p-3 m-2 bg-[#DADADA] placeholder:text-black rounded-lg" onChange={handleChange} required />
             </div>
             {!passwordMatch && (
-              <p style={{ color: "red", textAlign: "center" }}>Passwords are not matched!</p>
+              <p style={{ color: "red", textAlign: "center" }}>Les mots de passe sont différents!</p>
             )}
             <div className='flex flex-col sm:flex-row justify-center'>
               <input type="text" placeholder="N° de téléphone" name="phone" className="p-3 m-2 bg-[#DADADA] placeholder:text-black rounded-lg" onChange={handleChange} required />

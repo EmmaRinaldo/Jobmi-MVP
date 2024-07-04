@@ -9,9 +9,18 @@ export const registerUser = async (userData: {
   city: string;
   password: string;
   phone: string;
+  googleId?: string; // Rendre googleId facultatif
 }) => {
   try {
-    const response = await axios.post(`${API_URL}/users/register`, userData);
+    // Faire une copie des données utilisateur
+    const dataToSend = { ...userData };
+    
+    // Vérifier si googleId existe et est vide, si oui, le supprimer
+    if (dataToSend.googleId === '') {
+      delete dataToSend.googleId;
+    }
+
+    const response = await axios.post(`${API_URL}/users/register`, dataToSend);
     return response.data;
   } catch (error) {
     console.error('Erreur lors de l\'inscription de l\'utilisateur:', error);
