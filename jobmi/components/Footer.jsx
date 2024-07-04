@@ -6,7 +6,7 @@ import { FaInstagram, FaTiktok, FaLinkedinIn } from "react-icons/fa";
 
 export const Footer = () => {
   return (
-    <div className="w-[100%] footer-part grid grid-cols-9 gap-4 mt-[100px] px-6 sm:px-16 bg-black py-20">
+    <div className="w-[100%] footer-part grid grid-cols-9 gap-4 mt-[100px] px-6 sm:px-16 bg-black py-20 bottom-0 left-0 right-0">
       <div className="col-span-9 sm:col-span-3 flex flex-col">
         <Link href="/a-propos" className="text-white font-inter underline sm:mt-15">
           A PROPOS

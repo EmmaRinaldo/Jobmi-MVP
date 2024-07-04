@@ -21,28 +21,32 @@ const handler = NextAuth({
         CredentialsProvider({
             name: "Credentials",
             async authorize(credentials, req) {
-            if (!credentials.email || !credentials.password) {
-                throw new Error("Invalid Email or Password");
-            }
-            
-            try {
-                const res = await fetch(`${API_URL}/users/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: credentials.email, password: credentials.password })
-                });
-    
-                const user = await res.json();
-    
-                if (!res.ok) {
-                throw new Error(user.message || 'Login failed');
+                console.log('Credentials:', credentials); // Ajouter ce log
+                if (!credentials.email || !credentials.password) {
+                  throw new Error("Invalid Email or Password");
                 }
-    
-                return user;
-            } catch (error) {
-                throw new Error(error.message || 'Login failed');
-            }
+                
+                try {
+                  const res = await fetch(`${API_URL}/users/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: credentials.email, password: credentials.password })
+                  });
+              
+                  const user = await res.json();
+              
+                  console.log('User:', user); // Ajouter ce log
+              
+                  if (!res.ok) {
+                    throw new Error(user.message || 'Login failed');
+                  }
+              
+                  return user;
+                } catch (error) {
+                  throw new Error(error.message || 'Login failed');
+                }
             },
+              
         }),
     ],
   
@@ -52,14 +56,18 @@ const handler = NextAuth({
     callbacks: {
         async session({ session }) {
             try {
-              const res = await fetch(`${API_URL}/users/${session.user.email}`);
-              const sessionUser = await res.json();
-      
-              session.user = { ...session.user, ...sessionUser };
-              return session;
+                const res = await fetch(`${API_URL}/users/${session.user.email}`);
+                const sessionUser = await res.json();
+        
+                if (!res.ok) {
+                throw new Error(sessionUser.message || 'Fetching user failed');
+                }
+        
+                session.user = { ...session.user, ...sessionUser };
+                return session;
             } catch (error) {
-              console.log('Error fetching user session:', error);
-              return session;
+                console.log('Error fetching user session:', error);
+                return session;
             }
         },
 

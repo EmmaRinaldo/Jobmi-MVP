@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 
 const stagesFormations = {
     "https://zupimages.net/up/24/26/gj3p.png": [
