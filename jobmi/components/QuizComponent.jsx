@@ -97,7 +97,7 @@ const QuizComponent = () => {
   ];
 
   const questionTitles = [
-    "{varprénom}, un petit pas pour l’homme...",
+    "{varprénom}, un petit pas pour l’homme, un grand pas pour la reconversion ! 🧑‍🚀",
     "Vers un nouveau job, et au delà 🚀",
     "À mi-chemin de ta nouvelle carrière, fonce {varprénom} 🏁",
     "Pret à découvrir ton futur métier, {varprénom} ? 🎉",

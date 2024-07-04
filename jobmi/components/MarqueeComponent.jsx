@@ -49,7 +49,7 @@ export const MarqueeComponent = () => {
   };
 
   return (
-    <div className="col-span-12">
+    <div className="col-span-12 sm:mb-10 mb-5">
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} className="item flex items-center justify-center p-4">

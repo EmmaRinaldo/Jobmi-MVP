@@ -6,7 +6,7 @@ import {NotreTeam} from "../../components/NotreTeam"
 import {MarqueeComponent} from "../../components/MarqueeComponent"
 export default function APropos() {
   return (
-    <div className="mt[90px]">
+    <div className="mt[90px] font-sans">
       <div className="w-full bg-cover bg-center h-[500px] flex items-end flex-row-reverse" style={{backgroundImage: 'url(/media/cpm.png)'}}>
         
         <div className="text-right text-white text-5xl font-bold pr-2 pb-2">
