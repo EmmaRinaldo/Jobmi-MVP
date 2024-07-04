@@ -18,7 +18,7 @@ export const Featured = ({ article }) => {
             <img
               src="/media/blog-arrow.svg"
               alt="card-arrow"
-              className="w-24 absolute top-3 left-0 sm:top-8 sm:block lg:block hidden"
+              className="w-24 absolute top-3 left-0 sm:top-8 sm:flex; lg:flex hidden"
             />
 
               <h2 className='sm:text-3xl text-4xl sm:text-left text-center font-bold sm:w-[600px]'>

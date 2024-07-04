@@ -6,16 +6,18 @@ import {NotreTeam} from "../../components/NotreTeam"
 import {MarqueeComponent} from "../../components/MarqueeComponent"
 export default function APropos() {
   return (
-    <div>
-      <div className="relative">
-        <img src="/media/cpm.png" alt="cpm" className="w-full h-auto" />
-        <div className="absolute inset-0 flex flex-col justify-center items-end font-bold font-oddlini pr-16 text-white text-5xl">
+    <div className="mt[90px]">
+      <div className="w-full bg-cover bg-center h-[500px] flex items-end flex-row-reverse" style={{backgroundImage: 'url(/media/cpm.png)'}}>
+        
+        <div className="text-right text-white text-5xl font-bold pr-2 pb-2">
           <p>A Propos De La</p>
           <p>Boite La Plus</p>
           <p>Fun !</p>
         </div>
       </div>
-      <CustomComponent />
+      <div className="w-full">
+        <img src="/media/a-propos-prez-jobmi.svg" alt="Présentation de Jobmi" className="w-full h-auto" />
+      </div>
       <JobmiComponent />
       <ValuesComponent />
       <NotreTeam />
