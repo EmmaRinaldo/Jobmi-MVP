@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const StageCard = ({ image, title, duration, link, session }) => {
     return (
-        <div className="bg-[#F3F3F3] overflow-hidden">
-            <img className="w-full h-[250px] object-cover mx-auto" src={image} alt={title} />
+        <div className="bg-[#F3F3F3] overflow-hidden rounded-xl">
+            <img className="w-full h-[250px] object-cover object-top mx-auto" src={image} alt={title} />
             <div className="p-4 mx-auto">
                 <h2 className="text-xl font-bold mb-2">{title}</h2>
                 <div className='flex flex-row gap-1 my-1'>
