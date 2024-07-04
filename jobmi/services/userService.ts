@@ -40,3 +40,23 @@ export const subscribeToNewsletter = async (email: string) => {
       throw error;
     }
 };
+
+export const getUserData = async (email: string) => {
+  try {
+    const response = await axios.get(`${API_URL}/users/${email}`);
+    return response.data;
+  } catch (error) {
+    console.error('Erreur lors de la récupération des informations de l\'utilisateur:', error);
+    throw error;
+  }
+};
+
+export const updateUserData = async (email: string, userData: any) => {
+  try {
+    const response = await axios.put(`${API_URL}/users/${email}`, userData);
+    return response.data;
+  } catch (error) {
+    console.error('Erreur lors de la mise à jour des informations de l\'utilisateur:', error);
+    throw error;
+  }
+};

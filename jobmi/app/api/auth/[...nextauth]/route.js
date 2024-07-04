@@ -2,14 +2,14 @@ import NextAuth from "next-auth"
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_URL = "https://lp-jobmi-ab6b9d72e9ba.herokuapp.com/api";
 
 const handler = NextAuth({
     
     providers: [
         GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+            clientId: "128927012947-1ecprh1n16tse8kjto6q0n24kjl966u1.apps.googleusercontent.com",
+            clientSecret: "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",
             authorization: {
                 params: {
                     prompt: "consent",
@@ -46,7 +46,7 @@ const handler = NextAuth({
         }),
     ],
   
-    secret: process.env.NEXTAUTH_SECRET,
+    secret: "9f7783743a31cd2a839deb325756ba00",
     
     
     callbacks: {

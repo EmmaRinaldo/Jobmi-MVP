@@ -7,14 +7,18 @@ import React from 'react';
 export const AuthLinks = () => {
   const { data: session } = useSession();
 
+  const handleSignOut = () => {
+    signOut({ callbackUrl: '/' });
+  };
+
   return (
     <>
       {session ? (
         <>
-          <Link href="/profile" className="menu-item">Mon Compte</Link>
-          <a className="menu-item cursor-pointer" onClick={() => signOut()}>
+          <Link href="/profile" className="menu-item bg-[#D9D9D9] rounded-lg py-2 px-4">Mon Profile</Link>
+          <button className="menu-item cursor-pointer text-red-600" onClick={handleSignOut}>
             Déconnexion
-          </a>
+          </button>
         </>
       ) : (
         <Link className="bg-[#D9D9D9] rounded-lg py-2 px-4" href="/me-connecter">
@@ -23,4 +27,4 @@ export const AuthLinks = () => {
       )}
     </>
   );
-}
+};
