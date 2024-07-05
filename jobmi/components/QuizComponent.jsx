@@ -220,7 +220,7 @@ const QuizComponent = () => {
                     <input type="text" id="user-name" name="user-name" placeholder="Écrit ton prénom ici..." required className="w-full px-4 sm:py-2 py-3 border rounded-lg bg-[#D9D9D9] placeholder:text-white" />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="user-departement" className="block font-semibold mb-1 text-left">Où-tu souhaites bosser</label>
+                    <label htmlFor="user-departement" className="block font-semibold mb-1 text-left">Où-tu souhaites bosser ?</label>
                     <input type="text" id="user-departement" name="user-departement" placeholder="Écrit ton département ici..." required className="w-full px-4 sm:py-2 py-3 border rounded-lg bg-[#D9D9D9] placeholder:text-white" />
                   </div>
                   <button type="submit" className="px-4 py-2 bg-[#04192F] text-white rounded-xl hover:bg-blue-700 flex gap-2 font-semibold w-fit mt-2 sm:mx-0 mx-auto">Je commence le test <img src="/media/test/flèche.png" alt="" className="w-7" /></button>
