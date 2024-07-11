@@ -8,8 +8,8 @@ const handler = NextAuth({
     
     providers: [
         GoogleProvider({
-            clientId: "128927012947-1ecprh1n16tse8kjto6q0n24kjl966u1.apps.googleusercontent.com",
-            clientSecret: "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",
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             authorization: {
                 params: {
                     prompt: "consent",
@@ -50,7 +50,7 @@ const handler = NextAuth({
         }),
     ],
   
-    secret: "9f7783743a31cd2a839deb325756ba00",
+    secret: process.env.NEXTAUTH_SECRET,
     
     
     callbacks: {
